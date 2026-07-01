@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OMNITRIX | Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-omnitrix">
+    <div class="loader-ring"></div>
+    <div class="loader-ring"></div>
+    <div class="loader-ring"></div>
+    <div class="scan-line"></div>
+    <div class="loader-core">
+  <svg viewBox="0 0 100 100" class="omnitrix-logo">
+
+  <!-- outer ring -->
+  <circle cx="50" cy="50" r="48" fill="black" stroke="#00ff88" stroke-width="2"/>
+
+  <!-- top curved section -->
+  <path d="
+    M25 10
+    Q50 5 75 10
+    L60 45
+    Q50 50 40 45
+    Z
+  " fill="#00ff88"/>
+
+  <!-- bottom curved section -->
+  <path d="
+    M25 90
+    Q50 95 75 90
+    L60 55
+    Q50 50 40 55
+    Z
+  " fill="#00ff88"/>
+
+  <!-- center glow -->
+  <circle cx="50" cy="50" r="6" fill="#00ff88"/>
+</svg>
+</div>
+  </div>
+  <div class="loader-text" id="loader-status">INITIALIZING OMNITRIX...</div>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar" id="loader-bar"></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    <div class="nav-logo-icon"></div>
+    OMNITRIX
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PARTICLES -->
+<div id="particles"></div>
+
+<!-- ══════════════════════════════════════════════════════════ HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text-block">
+        <p class="hero-tag">SYSTEM ONLINE // DEVELOPER DETECTED</p>
+        <h1 class="hero-name glitch" data-text="SARANESH">
+          SARANESH
+          <span class="line2">S</span>
+        </h1>
+        <p class="hero-role">
+          <span id="typed-text"></span><span class="type-cursor"></span>
+        </p>
+        <p class="hero-bio">
+  Aspiring Software Engineer and UI Designer passionate about building clean,
+  interactive web experiences. I focus on creating visually engaging interfaces
+  while learning modern development technologies.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Establish Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-omnitrix">
+        <div class="omnitrix-device">
+          <div class="hud-data hud-data-tl">
+            SYS: ACTIVE<br>
+            PWR: ████████ 98%<br>
+            LAT: 0.004ms
+          </div>
+          <div class="hud-data hud-data-tr">
+            DNA: LOCKED<br>
+            ALN: 10/10<br>
+            ENG: MAX
+          </div>
+          <div class="hud-data hud-data-bl">
+            NODE: 147.22<br>
+            API: ONLINE<br>
+            BUILD: 2024
+          </div>
+          <div class="hud-data hud-data-br">
+            REQ: 1.2M<br>
+            ERR: 0.01%<br>
+            UP: 99.97%
+          </div>
+
+          <div class="omnitrix-outer-ring"></div>
+          <div class="omnitrix-mid-ring"></div>
+
+          <!-- Tick ring via JS -->
+          <div class="omnitrix-tick-ring" id="tick-ring"></div>
+
+          <div class="omnitrix-inner">
+            <div class="omnitrix-core" id="hero-core">
+              <svg class="omnitrix-symbol" viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="24" stroke="#001a0d" stroke-width="2.5"/>
+                <path d="M30 6 L30 54 M6 30 L54 30" stroke="#001a0d" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="30" cy="30" r="12" fill="none" stroke="#001a0d" stroke-width="2"/>
+                <circle cx="30" cy="30" r="5" fill="#001a0d"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════ ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Bio-Signature Scan</p>
+      <h2 class="section-title">About the Developer</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-hexagon-wrap">
+          <div class="about-hex">
+            <svg viewBox="0 0 260 260" fill="none">
+              <polygon points="130,10 240,72.5 240,187.5 130,250 20,187.5 20,72.5"
+                fill="none" stroke="#00ff8830" stroke-width="1.5"/>
+              <polygon points="130,30 222,80 222,180 130,230 38,180 38,80"
+                fill="none" stroke="#00ff8820" stroke-width="1"/>
+              <polygon points="130,5 245,70 245,190 130,255 15,190 15,70"
+                fill="none" stroke="#00ff8815" stroke-width="1" stroke-dasharray="4 4"/>
+            </svg>
+          </div>
+          <div class="about-hex-img">AM</div>
+        </div>
+
+        <div class="about-stats">
+  <div class="stat-item">
+    <span class="stat-num" data-count="1">0</span>
+    <span class="stat-label">Years Learning</span>
+  </div>
+
+  <div class="stat-item">
+    <span class="stat-num" data-count="5">0</span>
+    <span class="stat-label">Projects Built</span>
+  </div>
+
+  <div class="stat-item">
+    <span class="stat-num" data-count="1">0</span>
+    <span class="stat-label">Hackathons</span>
+  </div>
+
+  <div class="stat-item">
+    <span class="stat-num" data-count="3">0</span>
+    <span class="stat-label">Rank Achieved</span>
+  </div>
+</div>
+      </div>
+<div class="about-text reveal reveal-delay-2">
+  <h3>// Developer Profile</h3>
+
+  <p>
+    I'm an Engineering student with a strong interest in software development
+    and UI design. I enjoy building modern, responsive web applications and
+    continuously improving my skills.
+  </p>
+
+  <p>
+    I recently participated in the 5G Hackathon 2026 at VIT Chennai as part of
+    team <strong>FineWorks</strong>, where we secured 3rd place by developing a
+    decentralized emergency communication system.
+  </p>
+
+  <p>
+    I’m focused on learning, building real-world projects, and growing into a
+    skilled full-stack developer.
+  </p>
+
+  <div class="about-tags">
+    <span class="tag">Problem Solver</span>
+    <span class="tag">Quick Learner</span>
+    <span class="tag">UI Focused</span>
+    <span class="tag">Team Player</span>
+    <span class="tag">Hackathon Enthusiast</span>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════ SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Ability Matrix</p>
+      <h2 class="section-title">Skills & Expertise</h2>
+    </div>
+
+    <div class="skills-layout">
+      <!-- Omnitrix Circular Selector -->
+      <div class="reveal">
+        <div class="omnitrix-selector" id="skill-selector">
+          <div class="skill-ring"></div>
+          <canvas id="skill-canvas" style="position:absolute;inset:0;border-radius:50%;pointer-events:none;"></canvas>
+          <div class="skill-center" id="skill-center">
+            <div class="skill-center-name">SELECT SKILL</div>
+            <div class="skill-center-level">—</div>
+            <div class="skill-center-cat">Hover an orb</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Bars -->
+      <div class="reveal reveal-delay-2">
+        <div class="skill-list-panel">
+          <div class="skill-category">
+            <div class="skill-category-title">Frontend</div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span class="skill-bar-name">React / Next.js</span><span class="skill-bar-pct">95%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span class="skill-bar-name">TypeScript</span><span class="skill-bar-pct">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span class="skill-bar-name">CSS / Animation</span><span class="skill-bar-pct">92%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span class="skill-bar-name">Three.js / WebGL</span><span class="skill-bar-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-title">Backend</div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span class="skill-bar-name">Node.js / Express</span><span class="skill-bar-pct">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span class="skill-bar-name">PostgreSQL / Redis</span><span class="skill-bar-pct">82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span class="skill-bar-name">Python / FastAPI</span><span class="skill-bar-pct">78%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-title">DevOps & Tools</div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span class="skill-bar-name">Docker / Kubernetes</span><span class="skill-bar-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span class="skill-bar-name">AWS / Vercel / CF</span><span class="skill-bar-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════ PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Mission Archive</p>
+      <h2 class="section-title">Featured Projects</h2>
+    </div>
+
+    <div class="projects-filter reveal">
+      <button class="filter-btn active" data-filter="all">All Systems</button>
+      <button class="filter-btn" data-filter="web">Web Apps</button>
+      <button class="filter-btn" data-filter="api">APIs</button>
+      <button class="filter-btn" data-filter="ui">UI/UX</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+      <div class="project-card reveal" data-category="web">
+  <div class="corner-deco tl"></div><div class="corner-deco tr"></div>
+  <div class="corner-deco bl"></div><div class="corner-deco br"></div>
+
+  <div class="project-thumb">
+    <div class="project-thumb-grid"></div>
+    <div class="project-thumb-scan"></div>
+    <div class="project-thumb-icon">📡</div>
+    <span class="project-num">01</span>
+    <span class="project-status">HACKATHON</span>
+  </div>
+
+ <div class="projects-grid" id="projects-grid">
+
+  <!-- 🏆 HACKATHON -->
+  <div class="projects-grid">
+
+    <!-- Hackathon -->
+    <div class="project-card reveal">
+
+        <div class="project-thumb">
+            <img src="assets/images/hackathon2.jpeg" alt="5G Hackathon">
+        </div>
+
+        <div class="project-body">
+
+            <span class="project-tag">🏆 Achievement</span>
+
+            <h3>5G Hackathon 2026</h3>
+
+            <p>
+                Secured <strong>3rd Place</strong> at the 5G Hackathon hosted at
+                VIT Chennai with Team <strong>FineWorks</strong>. Developed a
+                decentralized emergency communication system for disaster
+                scenarios, focusing on reliable communication and rapid response.
+            </p>
+
+            <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="project-links">
+                <span class="winner-badge">🥉 3rd Place Winner</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Portfolio -->
+
+    <div class="project-card reveal">
+
+        <div class="project-thumb">
+            <img src="assets/images/portfolio.png" alt="Portfolio">
+        </div>
+
+        <div class="project-body">
+
+            <span class="project-tag">💻 Personal Project</span>
+
+            <h3>Omnitrix Portfolio</h3>
+
+            <p>
+                Designed and developed my personal portfolio using HTML, CSS,
+                and JavaScript with an Omnitrix-inspired futuristic interface,
+                interactive animations, and responsive design.
+            </p>
+
+            <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="project-links">
+                <a href="#" class="btn-project">Live Demo</a>
+                <a href="https://github.com/Saranesh543" target="_blank" class="btn-project">
+                    GitHub
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+     
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════ CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Open Channel</p>
+      <h2 class="section-title">Establish Contact</h2>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="reveal">
+        <div class="contact-info">
+          <h3>// Communication Channel Open</h3>
+          <p>
+  Open for collaborations, projects, and opportunities.
+  Feel free to connect — response time within 24 hours.
+</p>
+        </div>
+        <div class="contact-channels">
+          <a href="mailto:saranesh543@gmail.com" class="contact-channel">
+            <span class="channel-icon">✉</span>
+            <div class="channel-text">
+              <span class="channel-name">Email</span>
+              <span class="channel-val">saranesh543@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://github.com/Saranesh543" class="contact-channel" target="_blank">
+  <span class="channel-icon">⬡</span>
+  <div class="channel-text">
+    <span class="channel-name">GitHub</span>
+    <span class="channel-val">https://github.com/Saranesh543</span>
+  </div>
+</a>
+          <a href="https://www.linkedin.com/in/saranesh-s-12631a369/" class="contact-channel" target="_blank">
+            <span class="channel-icon">◈</span>
+            <div class="channel-text">
+              <span class="channel-name">LinkedIn</span>
+              <span class="channel-val">https://www.linkedin.com/in/saranesh-s-12631a369/</span>
+            </div>
+          </a>
+          <a href="https://x.com/SARANESH_543" class="contact-channel" target="_blank">
+            <span class="channel-icon">◉</span>
+            <div class="channel-text">
+              <span class="channel-name">Twitter / X</span>
+              <span class="channel-val">@SARANESH_543</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form-panel">
+          <div class="form-row">
+            <label class="form-label">Designation</label>
+            <input type="text" class="form-input" placeholder="Your name" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">Frequency (Email)</label>
+            <input type="email" class="form-input" placeholder="your@email.com" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">Subject</label>
+            <input type="text" class="form-input" placeholder="Mission objective" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">Transmission</label>
+            <textarea class="form-textarea" placeholder="Describe your mission..."></textarea>
+          </div>
+          <button class="form-submit" id="send-btn">
+            <span>▶ SEND TRANSMISSION</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>
+      PERSONAL PORTFOLIO &nbsp;◈&nbsp; ENGINEERED BY
+      <a href="#">SARANESH S </a>
+      &nbsp;◈&nbsp; 2024 &nbsp;◈&nbsp;
+      <a href="https://github.com/Saranesh543" target="_blank">GITHUB</a>
+    </p>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
