@@ -1429,3 +1429,20 @@ body::after {
 @keyframes trail-fade {
   to { transform: translate(-50%,-50%) scale(3); opacity: 0; }
 }
+.project-links {
+  position: relative;
+  z-index: 100;
+}
+
+.btn-project {
+  position: relative;
+  z-index: 101;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.project-thumb,
+.project-thumb-grid,
+.project-thumb-scan {
+  pointer-events: none;
+}
